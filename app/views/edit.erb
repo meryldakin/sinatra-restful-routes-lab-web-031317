@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+   <h1>Edit Recipe:</h1>
+   <form action="/recipes/<%= @new_recipe.id %>" method="post">
+    <input id="hidden" type="hidden" name="_method" value="patch">
+    <%= @new_recipe.name %>
+    <input type="text" name="name">
+    <%= @new_recipe.ingredients %>
+    <input type="text" name="ingredients">
+    <%= @new_recipe.cook_time %>
+    <input type="text" name="cook_time">
+    <input type="submit" value="submit">
+</form>
+
+  </body>
+</html>
